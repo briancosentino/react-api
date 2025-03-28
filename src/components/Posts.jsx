@@ -19,9 +19,15 @@ const Posts = () => {
     }, [])
 
     return (
-        <div className='w-[60%] m-auto flex flex-wrap'>
+        <div className='w-[80%] gap-4 m-auto flex flex-wrap'>
             {posts.map((post) => (
-                <div className="p-4 border border-stone-300 rounded-sm ">{post.title}</div>
+
+                <div className="p-2 w-[22%] border border-stone-300 rounded-sm ">
+                    <div className='w-full h-[130px]  rounded-xs'>
+                        <img className='w-full h-full' src={post.image} alt={post.title} />
+                    </div>
+                    <h2>{post.title} </h2>
+                </div>
             ))}
 
         </div>
